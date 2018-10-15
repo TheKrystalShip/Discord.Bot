@@ -1,6 +1,8 @@
-﻿using TheKrystalShip.Logging;
+﻿using System.Threading.Tasks;
 
-namespace TheKrystalShip.Discord.Bot.Services
+using TheKrystalShip.Logging;
+
+namespace TheKrystalShip.Discord
 {
     public class GreetingService
     {

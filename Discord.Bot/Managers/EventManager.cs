@@ -5,11 +5,8 @@ using System.Threading.Tasks;
 
 using TheKrystalShip.Logging;
 
-namespace TheKrystalShip.Discord.Bot.Managers
+namespace TheKrystalShip.Discord
 {
-    /// <summary>
-    /// Hooks into the client events
-    /// </summary>
     public class EventManager
     {
         private readonly DiscordSocketClient _client;

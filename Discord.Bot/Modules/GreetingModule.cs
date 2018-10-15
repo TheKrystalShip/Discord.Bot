@@ -4,15 +4,13 @@ using System.Threading.Tasks;
 
 using TheKrystalShip.Logging;
 
-namespace TheKrystalShip.Discord.Bot.Modules
+namespace TheKrystalShip.Discord
 {
-    public class GreetingModule : ModuleBase<SocketCommandContext>
+    public class GreetingModule : Module
     {
-        private readonly ILogger<GreetingModule> _logger;
-        
-        public GreetingModule(ILogger<GreetingModule> logger)
+        public GreetingModule(Tools tools) : base(tools)
         {
-            _logger = logger;
+
         }
 
         [Command("hello")]

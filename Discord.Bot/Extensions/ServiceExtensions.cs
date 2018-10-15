@@ -1,25 +1,16 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-using TheKrystalShip.Discord.Bot.Managers;
-using TheKrystalShip.Discord.Bot.Services;
-
-namespace TheKrystalShip.Discord.Bot.Extensions
+namespace TheKrystalShip.Discord
 {
-    /// <summary>
-    /// Load necessary types into the service collection
-    /// </summary>
     public static class ServiceExtensions
     {
         public static IServiceCollection AddHandlers(this IServiceCollection services)
         {
-            // Add your handlers here
-
             return services;
         }
 
         public static IServiceCollection AddManagers(this IServiceCollection services)
         {
-            // Add your managers here
             services.AddSingleton<EventManager>();
 
             return services;
@@ -27,8 +18,14 @@ namespace TheKrystalShip.Discord.Bot.Extensions
 
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
-            // Add your services here
             services.AddSingleton<GreetingService>();
+
+            return services;
+        }
+
+        public static IServiceCollection AddTools(this IServiceCollection services)
+        {
+            services.AddSingleton<Tools>();
 
             return services;
         }
